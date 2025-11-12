@@ -1,0 +1,32 @@
+{
+    "styles.crush.css": {
+        "imports": [
+            "bootstrap.css",
+            "custom.scss",
+            "media-queries.scss",
+            "menu\/menu-styles.scss",
+            "blog\/blog-styles.scss"
+        ],
+        "datem_sum": 10163012171,
+        "options": {
+            "boilerplate": false,
+            "rewrite_import_urls": "absolute",
+            "minify": true,
+            "vendor_target": "none",
+            "formatter": null,
+            "versioning": true,
+            "vars": [],
+            "cache": true,
+            "context": null,
+            "output_file": null,
+            "output_dir": null,
+            "asset_dir": null,
+            "doc_root": null,
+            "plugins": null,
+            "settings": [],
+            "stat_dump": false,
+            "source_map": false,
+            "newlines": "use-platform"
+        }
+    }
+}

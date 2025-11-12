@@ -1,0 +1,395 @@
+<section class="services" data-aos="fade-up" data-aos-duration="2000">
+      <h3>TREATMENTS</h3>
+   
+               <p>Some of the wide range of treatments we offer.</p>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <div class="container-fluid dental-feature">
+      <ul class="nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
+         <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill"
+               data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+               aria-selected="false">Cosmetic Dentistry</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill"
+               data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+               aria-selected="true">General Dentistry</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+               data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+               aria-selected="false">Straighter Teeth</button>
+         </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+         <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="row">
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="https://puritydental.com.au/wp-content/uploads/2024/05/Dental-Implants-Treatment-at-Purity-Dental-Mulgrave-Victoria.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Dental Implants</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/dental-implants/">Dental Implants</a></h3>
+                           <p>Dental implants are the ultimate solution for missing or damaged teeth providing exceptional durability, natural appearance and long-lasting results.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Veneers-Treatment-at-Purity-Dental-Mulgrave-Victoria.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Veneers</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/veneers/">Veneers</a></h3>
+                           <p>Get a perfect smile makeover with veneers! These thin custom-made shells transform your teeth, enhancing their shape, color, and appearance.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="https://puritydental.com.au/wp-content/uploads/2024/05/Teeth-Whitening-Treatment-at-Purity-Dental-Mulgrave-Victoria.webp" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Teeth Whitening</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/teeth-whitening/">Teeth Whitening</a></h3>
+                           <p>Whiten your teeth and remove stains with our safe & effective professional teeth-whitening treatment. Let your pearly whites shine bright!</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/denture_600.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Dentures</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/dentures/">Dentures</a></h3>
+                           <p>Removable prosthetic teeth for a complete smile transformation. Custom-fitted dentures that are comfortable, functional and natural-looking. </p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/mandibular-prosthesis-gum-all-system-364280134.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">All-On-4 Implants</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/all-on-4-implants/">All-On-4 Implants</a></h3>
+                           <p>Achieve full arch teeth replacement with only 4 strategically placed dental implants! Ideal for patients who may not meet traditional implant eligibility.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Crowns-and-Bridges-at-Purity-Dental-Mulgrave-Victoria (1).jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Bridges</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/bridges/">Bridges</a></h3>
+                           <p>Dental prosthetics that fill gaps between teeth. They’re custom-made to blend with your natural teeth, restoring appearance and functionality.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/woman-smiling-beautiful-teeth.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Gum lifts</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/gum-lift/">Gum lifts</a></h3>
+                           <p>Improve your smile by reshaping and contouring the gum line with a gum lift, resulting in a more balanced and aesthetically pleasing appearance.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Gum-Lift-Purity-Dental-Mulgrave.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Smile Makeover</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/smile-makeover/">Smile Makeover</a></h3>
+                           <p>Transform your smile and boost your confidence with a stunning smile makeover. Range of treatments designed to enhance your smile.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/First Visit.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Your First Visit</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/your-first-visit/">Your First Visit</a></h3>
+                           <p>Get a thorough 60-minute dental assessment to identify your specific concerns and needs, ensuring a comprehensive understanding of your oral health.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/regular_checkups_600.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Dental Emergency</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/dental-emergencies/">Dental Emergency</a></h3>
+                           <p>Need urgent dental care? Our emergency dentistry services provide immediate relief for toothaches, broken teeth and other dental emergencies.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Tooth-Coloured-Fillings-Treatment-at-Purity-Dental-Mulgrave-Victoria.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Dental Fillings</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/tooth-coloured-fillings/">Dental Fillings</a> </h3>
+                           <p>A simple and effective solution to repair decayed or damaged teeth. They restore tooth structure and protect against further deterioration.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Wisdom Teeth.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Wisdom Teeth</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/wisdom-teeth-removal/">Wisdom Teeth</a></h3>
+                           <p>Wisdom teeth removal is a common treatment we perform to extract impacted wisdom teeth that are causing pain, discomfort & oral health issues.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Extraction and Socket Preservation.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Extraction & Socket Preservation</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/extraction-and-socket-preservation/">Extraction &amp; Socket Preservation</a></h3>
+                           <p>An effective solution that helps to preserve the bone and gum tissue after a tooth is extracted. Helps for successful implant placement in the future.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/kids_dental_600.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Kids Dental</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/childrens-dentistry/">Kids Dental</a></h3>
+                           <p>Our team of experienced children’s dentists provide gentle and compassionate care for children of all ages to get the dental care they need.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="https://puritydental.com.au/wp-content/uploads/2024/05/root-canal-treatment-at-Purity-Dental-Mulgrave-Victoria.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Root Canal</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/root-canal-treatment/">Root Canal</a></h3>
+                           <p>A safe and effective way to save a tooth that is severely decayed or infected. Removes infected pulp and nerves and prevents extraction of a tooth.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-3 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Dental-Crowns-Purity-Dental-Mulgrave-Victoria.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Dental Crowns</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/dental-crowns/">Dental Crowns</a></h3>
+                           <p>Tooth-shaped caps which are placed over damaged or decayed teeth to restore their strength, shape, and natural appearance. </p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="row">
+               <div class="col-12 col-lg-4 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/happy-woman-braces-teeth.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Braces</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/braces/">Braces </a></h3>
+                           <p>Braces are made of metal or clear brackets that are attached to your teeth to help straighten crooked teeth, close gaps, and correct bite problems.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-4 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/teeth-with-inman-aligners.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Inman Aligners</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/inman-aligners/">Inman Aligners</a></h3>
+                           <p>A type of clear, removable aligner that can be used to straighten teeth quickly and comfortably. Made of thin, flexible material that is custom-made for your teeth.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-4 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/girl-sitting-on-dentist-chair.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Early intervention orthodontics</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/early-intervention-orthodontics/">Early Intervention Orthodontics</a></h3>
+                           <p>Orthodontic intervention that can help improve the alignment of teeth and jaws in children. It can help prevent more serious problems from developing later on.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-4 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/woman-hand-putting-transparent.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">SmileStyler</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/smilestyler/">SmileStyler</a></h3>
+                           <p>A clear aligner system that uses 3D technology to create a custom treatment plan for your smile. Achieve the straighter smile you’ve always wanted.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-4 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/female-doctor-holding-a-transparent-invisalign.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Invisalign</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/braces/">Invisalign</a></h3>
+                           <p>Custom-made, removable and comfortable clear aligners that straighten teeth discreetly. Shifts your teeth into place without the need for metal braces.</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-4 g-0 p-0 my-2 my-lg-0 flip-card d-flex justify-content-center">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/Clear Braces.jpg" alt="dental treatment" class="bg-img">
+                  <div class="overlay"></div>
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Clear braces</h3>
+                     </div>
+                     <div class="flip-card-back px-2 px-lg-4 d-flex justify-content-center align-items-center">
+                        <div>
+                           <h3><a href="/treatments/braces/">Clear Braces</a></h3>
+                           <p>Get a straight, confident smile discreetly with clear braces. Perfect for all ages. A great alternative to traditional braces. Let your smile shine through!</p>
+                           <a href="https://puritydental.com.au/book-online/" class="booknow-link">Book Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
