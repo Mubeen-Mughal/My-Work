@@ -1,0 +1,74 @@
+// Load Wert widget script
+add_action('wp_enqueue_scripts', function () {
+    if (is_cart()) {
+        wp_enqueue_script('wert-js', 'https://javascript.wert.io/wert-6.7.0.js', [], null, true);
+    }
+});
+
+// Shortcode for Wert Payment Button (on cart page only)
+function wert_payment_widget_shortcode() {
+    if (!is_cart()) return;
+
+    ob_start();
+    ?>
+    <div id="wert-payment-section" style="margin-top: 30px;">
+        <button id="launch-wert-button">
+            Pay with Wert (You pay €<span id="wert-cart-total"><?php echo number_format((float)WC()->cart->get_cart_contents_total(), 2, '.', ''); ?></span>)
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Update displayed cart total
+            function updateCartTotal() {
+                const totalElement = document.querySelector(".order-total .woocommerce-Price-amount");
+                const cartTotalElement = document.getElementById("wert-cart-total");
+                if (totalElement && cartTotalElement) {
+                    const newTotal = totalElement.textContent.replace(/[^\d.,]/g, '').replace(',', '.');
+                    cartTotalElement.textContent = parseFloat(newTotal).toFixed(2);
+                }
+            }
+
+            updateCartTotal(); // Initial load
+
+            // Update on cart changes (AJAX updates from WooCommerce)
+            jQuery(document.body).on('updated_cart_totals', function () {
+                updateCartTotal();
+            });
+
+            // Button click with delegation
+            document.addEventListener("click", function (event) {
+                if (event.target && event.target.id === "launch-wert-button") {
+                    const cartTotalText = document.getElementById("wert-cart-total").textContent;
+                    const cartTotal = parseFloat(cartTotalText).toFixed(2); // Full amount, no fee
+
+                    if (typeof WertWidget !== "undefined") {
+                        const wertWidget = new WertWidget({
+                            partner_id: '01JNRF5ZK22GEZS6GQZKN2X4FD',
+                            origin: 'https://widget.wert.io',
+                            currency: 'EUR',
+                            commodity: 'USDC',
+                            network: 'polygon',
+                            commodity_amount: cartTotal, // Full amount in EUR
+                            address: '0x8ed077db8f84edcf590e467573a2c30a945a99d9'
+                        });
+
+                        wertWidget.open();
+                    } else {
+                        console.error("WertWidget is not defined.");
+                    }
+                }
+            });
+        });
+    </script>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('wert_payment_widget', 'wert_payment_widget_shortcode');
+
+// Display Wert widget under cart total
+add_action('woocommerce_after_cart_totals', function () {
+    if (is_cart()) {
+        echo do_shortcode('[wert_payment_widget]');
+    }
+});
