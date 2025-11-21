@@ -1,0 +1,214 @@
+// Add shortcode [cura4u_search]
+add_shortcode('cura4u_search', function() {
+    ob_start(); ?>
+
+    <div id="cura4u-search-box" style="max-width:500px;margin:20px auto;position:relative;">
+        <!-- Location Dropdown -->
+        <select id="cura4u-location" style="width:100%;padding:10px;margin-bottom:10px;">
+            <option value="">Loading locations...</option>
+        </select>
+
+        <!-- Search Input -->
+        <div style="position:relative;">
+            <input type="text" id="cura4u-keyword" placeholder="Search doctors, services, lab tests, blogs..."
+                   style="width:100%;padding:10px 35px 10px 10px;" autocomplete="off" />
+            <!-- Search Icon -->
+            <span style="position:absolute;right:35px;top:50%;transform:translateY(-50%);color:#888;">
+                🔍
+            </span>
+            <!-- Loader -->
+            <div id="cura4u-loader" style="display:none;position:absolute;right:10px;top:50%;transform:translateY(-50%);
+                                            border:3px solid #f3f3f3;border-top:3px solid #0073aa;border-radius:50%;
+                                            width:16px;height:16px;animation:spin 1s linear infinite;"></div>
+        </div>
+
+        <!-- Suggestion Dropdown -->
+        <div id="cura4u-suggestions"
+             style="border:1px solid #ddd;display:none;position:absolute;z-index:999;background:#fff;width:100%;max-width:500px;"></div>
+    </div>
+
+    <style>
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    jQuery(document).ready(function($){
+
+        let areas = [];
+
+        function slugify(text) {
+            return text.toString().toLowerCase().trim()
+                .replace(/&/g, '-and-')
+                .replace(/[^a-z0-9]+/g, '-') 
+                .replace(/-+/g, '-')        
+                .replace(/^-|-$/g, '');     
+        }
+
+        function normalizeUrl(u) {
+            if(!u) return u;
+            u = u.toString().trim();
+            if(u.match(/^https?:\/\//i)) return u;
+            if(u.indexOf('/') === 0) return 'https://cura4u.com' + u;
+            return 'https://cura4u.com/' + u;
+        }
+
+        function loadLocations() {
+            $.ajax({
+                url: "https://api.cura4u.com/api/common/getareabysearchkeyword",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ "Keyword": "fl" }),
+                success: function(response) {
+                    let select = $("#cura4u-location");
+                    select.empty().append('<option value="">Select Location</option>');
+                    areas = Array.isArray(response) ? response : [];
+                    let defaultSet = false;
+                    areas.forEach(function(area) {
+                        let sel = '';
+                        if(!defaultSet && (area.Name || '').toLowerCase().indexOf('jacksonville') !== -1) {
+                            sel = ' selected';
+                            defaultSet = true;
+                        }
+                        select.append('<option value="'+area.Id+'" data-name="'+(area.Name||'')+'" data-category="'+(area.Category||'')+'"'+sel+'>'+ (area.Name || '') +'</option>');
+                    });
+                },
+                error: function(err) {
+                    console.error("Error loading locations:", err);
+                    $("#cura4u-location").html('<option value="">Error loading locations</option>');
+                }
+            });
+        }
+        loadLocations();
+
+        function buildSlugCandidates(name) {
+            let visible = (name || '').split(';')[0] || name || '';
+            let s1 = slugify(visible);
+            let sNo19 = s1.replace(/-19/g, '').replace(/-+/g,'-').replace(/^-|-$/g,'');
+            return [s1, sNo19];
+        }
+
+        // typing => search suggestions
+        $("#cura4u-keyword").on("input", function(){
+            let keyword = $(this).val().trim();
+            let locId = $("#cura4u-location").val();
+            let box = $("#cura4u-suggestions");
+
+            if(keyword.length < 2) {
+                box.hide();
+                return;
+            }
+            if(!locId) {
+                box.html('<div style="padding:10px;color:#999;">Please select a location first</div>').show();
+                return;
+            }
+
+            let selected = areas.find(a => a.Id == locId) || {
+                Id: locId,
+                Name: $("#cura4u-location option:selected").data('name'),
+                Category: $("#cura4u-location option:selected").data('category')
+            };
+
+            let requestData = {
+                MedicalProductId: null,
+                SearchKeyWord: keyword,
+                SelectedAreaId: selected.Id,
+                SelectedAreaName: selected.Name,
+                SelectedAreaCategory: selected.Category
+            };
+
+            $("#cura4u-loader").show(); // show loader
+
+            $.ajax({
+                url: "https://api.cura4u.com/api/common/search",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(requestData),
+                success: function(response) {
+                    $("#cura4u-loader").hide(); // hide loader
+                    box.empty();
+
+                    let results = (response && response.lstMedicalProducts) ? response.lstMedicalProducts : [];
+
+                    if(results.length === 0) {
+                        box.html('<div style="padding:10px;color:#999;">No results found</div>').show();
+                        return;
+                    }
+
+                    results.forEach(function(item) {
+                        let link = null;
+                        let cat = (item.Category || '').toString().toLowerCase();
+                        let candidates = buildSlugCandidates(item.Name);
+                        let slug = candidates[0] || slugify(item.Name || keyword);
+
+                        // Build correct URL for each category
+                        switch(cat) {
+                            case 'blog':
+                            case 'blogs':
+                                link = 'https://cura4u.com/blog/' + slug;
+                                break;
+                            case 'labtest':
+                            case 'lab test':
+                                link = 'https://cura4u.com/lab-tests/' + slug;
+                                break;
+                            case 'imaging':
+                            case 'radiology':
+                                link = 'https://cura4u.com/radiology/' + slug;
+                                break;
+                            case 'doctor':
+                            case 'physician':
+                            case 'doctors':
+                                link = 'https://cura4u.com/doctors-list/d-' + slug;
+                                break;
+                            case 'service':
+                            case 'services':
+                                link = 'https://cura4u.com/services/' + slug;
+                                break;
+                            default:
+                                link = null; // skip invalid ones
+                        }
+
+                        if (!link) return; // skip invalid URLs
+                        link = normalizeUrl(link);
+
+                        let title = (item.Name || '').split(';')[0] || 'Result';
+                        let catLabel = item.Category || '';
+                        let $row = $('<div class="cura4u-suggestion" style="padding:10px;cursor:pointer;border-bottom:1px solid #eee;"></div>');
+                        $row.attr('data-link', link);
+                        $row.append('<div><strong>' + title + '</strong></div>');
+                        if(catLabel) $row.append('<div style="font-size:12px;color:#666;">' + catLabel + '</div>');
+                        box.append($row);
+                    });
+
+                    box.show();
+                },
+                error: function(err) {
+                    $("#cura4u-loader").hide();
+                    console.error("Search API error:", err);
+                    $("#cura4u-suggestions").html('<div style="padding:10px;color:red;">Error fetching results</div>').show();
+                }
+            });
+        });
+
+        // Click suggestion
+        $(document).on("click", ".cura4u-suggestion", function(){
+            let url = $(this).attr('data-link');
+            if(url) window.open(url, '_blank');
+        });
+
+        // Hide suggestions when clicking outside
+        $(document).on('click', function(e){
+            if(!$(e.target).closest('#cura4u-search-box').length) {
+                $('#cura4u-suggestions').hide();
+            }
+        });
+
+    });
+    </script>
+
+    <?php
+    return ob_get_clean();
+});
